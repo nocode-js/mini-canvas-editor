@@ -38,9 +38,9 @@ jobs:
         run: |
             node scripts/append-ga.cjs demos/webpack-app/public
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: demos
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
