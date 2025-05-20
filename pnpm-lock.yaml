@@ -64,11 +64,11 @@ importers:
         specifier: 6.0.0-beta13
         version: 6.0.0-beta13
       mini-canvas-core:
-        specifier: workspace:*
-        version: link:../../core
+        specifier: ^0.3.2
+        version: 0.3.2
       mini-canvas-editor:
-        specifier: workspace:*
-        version: link:../../editor
+        specifier: ^0.3.2
+        version: 0.3.2(mini-canvas-core@0.3.2)
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^2.1.0
@@ -98,11 +98,11 @@ importers:
   demos/webpack-app:
     dependencies:
       mini-canvas-core:
-        specifier: workspace:*
-        version: link:../../core
+        specifier: ^0.3.2
+        version: 0.3.2
       mini-canvas-editor:
-        specifier: workspace:*
-        version: link:../../editor
+        specifier: ^0.3.2
+        version: 0.3.2(mini-canvas-core@0.3.2)
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.7.5
@@ -138,8 +138,8 @@ importers:
   editor:
     dependencies:
       mini-canvas-core:
-        specifier: ^0.3.1
-        version: 0.3.1
+        specifier: ^0.3.2
+        version: 0.3.2
     devDependencies:
       '@rollup/plugin-node-resolve':
         specifier: ^15.2.2
@@ -2513,8 +2513,13 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
 
-  mini-canvas-core@0.3.1:
-    resolution: {integrity: sha512-qXWZ/axctBE1jT2k4xiuVqVJYNZ65CEzC5S1xO5LUbtJyFH90ugniFYush9tA44NN1ydpsil+i7YXe8qb13jKA==}
+  mini-canvas-core@0.3.2:
+    resolution: {integrity: sha512-RGepHIsIael2WymrnQx2BA1q4mW4PSd0VVKwITpGIsNUrtXm9ueWTArPKzc7uKFV2CKDgqG/3j//5pLTNPkAnA==}
+
+  mini-canvas-editor@0.3.2:
+    resolution: {integrity: sha512-SL4wz3ygObhYFPaOG25H5MpH/Ci9T9PCgiMiWCcCvHAKqRwwM/UBVHQTYoXpFm8yRSQdkBvhHLMndOUak/+5nQ==}
+    peerDependencies:
+      mini-canvas-core: ^0.3.2
 
   minimalistic-assert@1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
@@ -6242,7 +6247,7 @@ snapshots:
 
   min-indent@1.0.1: {}
 
-  mini-canvas-core@0.3.1:
+  mini-canvas-core@0.3.2:
     dependencies:
       fabric: 6.0.0-beta14
     transitivePeerDependencies:
@@ -6250,6 +6255,10 @@ snapshots:
       - encoding
       - supports-color
       - utf-8-validate
+
+  mini-canvas-editor@0.3.2(mini-canvas-core@0.3.2):
+    dependencies:
+      mini-canvas-core: 0.3.2
 
   minimalistic-assert@1.0.1: {}
 
