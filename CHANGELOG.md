@@ -1,3 +1,7 @@
+## 0.3.2
+
+Changed the project location on GitHub to [nocode-js/mini-canvas-editor](https://github.com/nocode-js/mini-canvas-editor).
+
 ## 0.3.1
 
 Added a new fill mode to the `replaceRectToImage` method in the `MceCanvasReplacer` class (credit: [@seven7seven](https://github.com/seven7seven)).
